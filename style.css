@@ -1,0 +1,676 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --pink: #ff72b6;
+    --purple: #a78bfa;
+    --dark: #24182f;
+    --muted: #776b82;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff8fc;
+    color: var(--dark);
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.background-glow {
+    position: fixed;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: .28;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.glow-one {
+    background: #ff9bd2;
+    top: 5%;
+    left: -180px;
+}
+
+.glow-two {
+    background: #b8a0ff;
+    right: -180px;
+    top: 45%;
+}
+
+.navbar {
+    width: min(1100px, 90%);
+    margin: auto;
+    height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-weight: 700;
+    color: #b44e91;
+    letter-spacing: -.5px;
+}
+
+.nav-label {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.hero {
+    min-height: 680px;
+    padding: 95px 20px 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.pill, .section-tag {
+    display: inline-block;
+    border: 1px solid #f6cce4;
+    background: rgba(255,255,255,.75);
+    color: #b44e91;
+    padding: 9px 18px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.small-title {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #a78bfa;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 16px;
+}
+
+h1 {
+    font-size: clamp(38px, 7vw, 76px);
+    line-height: 1.17;
+    letter-spacing: -2px;
+    font-weight: 800;
+}
+
+.gradient-text {
+    background: linear-gradient(100deg, #f15ba5, #a78bfa, #e879b9);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero-desc {
+    max-width: 580px;
+    color: var(--muted);
+    line-height: 1.9;
+    font-size: 14px;
+    margin: 24px 0 30px;
+}
+
+.main-button {
+    border: none;
+    border-radius: 50px;
+    padding: 15px 27px;
+    background: linear-gradient(110deg, #ff72b6, #a78bfa);
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 12px 28px #d98bc545;
+    transition: transform .25s, box-shadow .25s;
+}
+
+.main-button:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 16px 32px #d98bc56b;
+}
+
+.main-button:active {
+    transform: scale(.97);
+}
+
+.main-button span {
+    margin-left: 8px;
+}
+
+.scroll-hint {
+    color: #a99aaf;
+    font-size: 11px;
+    margin-top: 55px;
+    animation: bob 1.8s infinite;
+}
+
+.birthday-section, .letter-section, .final-section {
+    text-align: center;
+    padding: 100px 20px;
+    scroll-margin-top: 35px;
+}
+
+.birthday-section {
+    background: linear-gradient(180deg, #fff8fc, #fff0f8);
+}
+
+h2 {
+    font-size: clamp(27px, 4vw, 42px);
+    letter-spacing: -1px;
+    margin-top: 20px;
+}
+
+.section-desc {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 13px auto 30px;
+    max-width: 480px;
+}
+
+.cake-scene {
+    max-width: 420px;
+    margin: 35px auto 25px;
+    padding: 35px 15px;
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+    background: #ffffffa6;
+    box-shadow: 0 20px 60px #dca3c51c;
+}
+
+.cake-emoji {
+    font-size: 105px;
+    animation: cakeFloat 3s ease-in-out infinite;
+}
+
+.candles {
+    font-size: 26px;
+    margin-top: -22px;
+    margin-bottom: 25px;
+}
+
+.candle {
+    display: inline-block;
+    margin: 0 7px;
+    animation: candleWiggle 1s infinite alternate;
+}
+
+.cake-caption {
+    color: #b44e91;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.letter-section {
+    background: #fffdfd;
+}
+
+.envelope {
+    border: 1px solid #f3d6e7;
+    border-radius: 24px;
+    background: white;
+    padding: 30px 35px;
+    min-width: min(300px, 90%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin: 35px auto;
+    color: #9e4b88;
+    box-shadow: 0 15px 50px #d89bb52b;
+    transition: transform .3s;
+}
+
+.envelope:hover {
+    transform: translateY(-7px) rotate(-1deg);
+}
+
+.envelope-icon {
+    font-size: 65px;
+    animation: bob 2s infinite;
+}
+
+.envelope-small {
+    font-size: 11px;
+    color: #a99aaf;
+}
+
+.letter-card {
+    width: min(600px, 100%);
+    margin: 35px auto 0;
+    padding: clamp(22px, 5vw, 45px);
+    border: 1px solid #f6d9e9;
+    border-radius: 25px;
+    background: linear-gradient(145deg, #fff, #fff5fb);
+    text-align: left;
+    box-shadow: 0 20px 60px #d89bb51c;
+    animation: letterAppear .65s ease both;
+}
+
+.letter-top {
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #c06a9e;
+    margin-bottom: 25px;
+}
+
+.letter-card h3 {
+    text-align: center;
+    color: #b44e91;
+    font-size: 23px;
+    margin-bottom: 25px;
+}
+
+.letter-card p {
+    color: #716276;
+    font-size: 13px;
+    line-height: 2;
+    margin: 15px 0;
+}
+
+.letter-ending {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.letter-ending strong {
+    color: #b44e91;
+}
+
+.final-section {
+    background: linear-gradient(145deg, #fff0f8, #f2edff);
+}
+
+.final-heart {
+    font-size: 65px;
+    animation: heartbeat 1.3s infinite;
+}
+
+.final-section > p {
+    max-width: 480px;
+    margin: 18px auto 28px;
+    color: var(--muted);
+    line-height: 1.9;
+    font-size: 13px;
+}
+
+.final-message {
+    max-width: 540px;
+    margin: 30px auto 0;
+    padding: 30px 20px;
+    border-radius: 24px;
+    background: #ffffffbd;
+    color: #b44e91;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.9;
+    animation: letterAppear .6s ease both;
+}
+
+footer {
+    padding: 30px 15px;
+    text-align: center;
+    color: #a87899;
+    font-size: 12px;
+}
+
+.footer-small {
+    font-size: 10px;
+    margin-top: 7px;
+    color: #b6a8b9;
+}
+
+.music-button {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 10;
+    border: 1px solid #ffffff;
+    background: #ffffffeb;
+    color: #b44e91;
+    box-shadow: 0 6px 24px #ac76a22b;
+    border-radius: 50px;
+    padding: 12px 17px;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.music-button.playing {
+    animation: bob 1s infinite;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#floating-elements {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.float-item {
+    position: absolute;
+    bottom: -40px;
+    animation: floatUp linear forwards;
+    opacity: 0;
+    user-select: none;
+}
+
+.confetti {
+    position: fixed;
+    z-index: 20;
+    top: -20px;
+    pointer-events: none;
+    animation: confettiFall linear forwards;
+}
+
+
+/* =================================
+   BEAUTIFUL MEMORIES GALLERY
+================================= */
+
+.memories-section {
+    padding: 100px 20px;
+    background:
+        radial-gradient(ellipse at top left, #ffe4f2 0%, transparent 45%),
+        radial-gradient(ellipse at bottom right, #eee6ff 0%, transparent 45%),
+        #fffafd;
+    text-align: center;
+}
+
+.memories-gradient {
+    background: linear-gradient(100deg, #f15ba5, #a78bfa);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.memories-grid {
+    width: min(1050px, 100%);
+    margin: 48px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 26px;
+    text-align: left;
+}
+
+.memory-card {
+    overflow: hidden;
+    background: rgba(255, 255, 255, .88);
+    border: 1px solid #f5deeb;
+    border-radius: 22px;
+    box-shadow: 0 12px 35px #bd83a719;
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+    animation: memoryAppear .7s ease both;
+}
+
+.memory-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 22px 45px #bd83a72e;
+}
+
+.memory-photo {
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ffe1ef, #e8ddff);
+}
+
+.memory-photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform .6s ease;
+}
+
+.memory-card:hover .memory-photo img {
+    transform: scale(1.07);
+}
+
+.photo-heart {
+    position: absolute;
+    right: 13px;
+    top: 13px;
+    width: 37px;
+    height: 37px;
+    display: grid;
+    place-items: center;
+    background: #ffffffd9;
+    color: #ed69a8;
+    border-radius: 50%;
+    font-size: 23px;
+    box-shadow: 0 4px 12px #0000000d;
+    transition: transform .3s ease;
+}
+
+.memory-card:hover .photo-heart {
+    transform: scale(1.15) rotate(-10deg);
+}
+
+.memory-info {
+    padding: 20px 19px 23px;
+}
+
+.memory-number {
+    color: #bb78a5;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.memory-info h3 {
+    font-size: 16px;
+    color: #67435e;
+    margin: 10px 0;
+}
+
+.memory-info p {
+    color: #8a7a8b;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.memories-footer {
+    margin: 40px auto 0;
+    color: #ad7d9e;
+    font-size: 12px;
+}
+
+.memories-footer span {
+    color: #ef82b9;
+    margin: 0 8px;
+}
+
+@keyframes memoryAppear {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tablet */
+@media (max-width: 850px) {
+    .memories-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .memory-photo {
+        height: 260px;
+    }
+}
+
+/* HP */
+@media (max-width: 520px) {
+    .memories-section {
+        padding: 75px 16px;
+    }
+
+    .memories-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 32px;
+    }
+
+    .memory-photo {
+        height: 190px;
+    }
+
+    .memory-info {
+        padding: 14px 12px 17px;
+    }
+
+    .memory-info h3 {
+        font-size: 13px;
+    }
+
+    .memory-info p {
+        font-size: 11px;
+        line-height: 1.7;
+    }
+
+    .memory-number {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .photo-heart {
+        width: 30px;
+        height: 30px;
+        font-size: 19px;
+        top: 8px;
+        right: 8px;
+    }
+}
+
+@keyframes bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-9px); }
+}
+
+@keyframes cakeFloat {
+    0%, 100% { transform: translateY(0) rotate(-2deg); }
+    50% { transform: translateY(-12px) rotate(2deg); }
+}
+
+@keyframes candleWiggle {
+    from { transform: rotate(-5deg); }
+    to { transform: rotate(5deg); }
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    15% { transform: scale(1.15); }
+    30% { transform: scale(1); }
+    45% { transform: scale(1.1); }
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0);
+        opacity: 0;
+    }
+    10% { opacity: .85; }
+    90% { opacity: .7; }
+    100% {
+        transform: translateY(-115vh) rotate(35deg);
+        opacity: 0;
+    }
+}
+
+@keyframes confettiFall {
+    to {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+@keyframes letterAppear {
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(.97);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        height: 65px;
+    }
+
+    .logo {
+        font-size: 13px;
+    }
+
+    .nav-label {
+        font-size: 10px;
+    }
+
+    .hero {
+        min-height: 620px;
+        padding-top: 70px;
+    }
+
+    h1 {
+        letter-spacing: -1.5px;
+    }
+
+    .hero-desc {
+        font-size: 13px;
+    }
+
+    .birthday-section, .letter-section, .final-section {
+        padding: 75px 18px;
+    }
+
+    .cake-emoji {
+        font-size: 85px;
+    }
+
+    .letter-card h3 {
+        font-size: 20px;
+    }
+
+    .music-button {
+        right: 14px;
+        bottom: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+}
